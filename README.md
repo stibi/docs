@@ -29,7 +29,7 @@ The system works like this:
  - Doc topics optionally specify which version they apply to using the `since:` tag. For example, the topic on WP-CLI commands is available since VersionPress 2.0 and [the file](https://raw.githubusercontent.com/versionpress/docs/3ad7f2728b7134d2d7fd19b753b210d0c7b38871/content/en/02-feature-focus/10-wp-cli.md) indicates this with `since: 2.0` in its [front matter](http://jekyllrb.com/docs/frontmatter/).
  - The global configuration indicates which version to render, and for example if the shown version should be 1.0, the topic on WP-CLI is excluded from the navigation.
 
-The `since:` tag can be specified either for a specific page at the top of the Markdown document or for the whole section in its `config.yaml`, see e.g. [the sync section's config.yaml](https://github.com/versionpress/docs/blob/3ad7f2728b7134d2d7fd19b753b210d0c7b38871/content/en/03-sync/config.yaml).
+The `since:` tag can be specified either for a specific page at the top of the Markdown document or for the whole section in its `config.yml`, see e.g. [the sync section's config.yml](https://github.com/versionpress/docs/blob/9738af100e640a525c2ae0119bc3060f175b65a9/content/en/03-sync/config.yml).
 
 
 
@@ -50,7 +50,7 @@ The `since:` tag can be specified either for a specific page at the top of the M
 
 ```
 <div class="note">
-  <strong>Note title</strong>
+  <p><strong>Note title</strong></p>
   <p>This will be rendered in a highlighted box.</p>
 </div>
 ```
@@ -58,11 +58,23 @@ The `since:` tag can be specified either for a specific page at the top of the M
  - **TODO markers** can be written as `[TODO]` or `[TODO some arbitrary text]`. They will be highlighted in yellow and should be used rarely, possibly in alpha / beta versions of the doc topic.
 
 
-## Previewing and deploying updated docs
+## Deploying docs
 
-The engine running the docs site is an internal project at the moment so the only way to preview the pages is to use some Markdown editor. The updates are currently deployed manually.
+When a PR is merged into `master`, it is automatically deployed to [docs.versionpress.net](http://docs.versionpress.net/en).
 
 
 ## Localization
 
 We currently only have an English version living in the `content/en` directory. In the future, localized versions will live in sibling directories. Contributions welcome.
+
+## Redirects
+
+URL redirects can be specified in `content/config.yml` like so:
+
+```
+redirects:
+  'en/getting-started/old-name': 'en/getting-started/new-name'
+```
+
+Note that there is no leading slash. This leads to HTTP 301 Moved Permanently.
+

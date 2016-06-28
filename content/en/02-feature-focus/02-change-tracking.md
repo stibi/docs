@@ -13,11 +13,8 @@ Change tracking is a core feature of VersionPress. This page describes the three
 Most of the time, VersionPress works silently, simply tracking all the important changes and recording them for later use. This includes both files and database entities like posts or comments. This section contains some specifics on what is tracked and how.
 
 <div class="note">
- 
-  **Note**
- 
-  The info below might not be entirely complete as there are lots of details for various content types. Consider it a brief overview.
- 
+  <p><strong>Note</strong></p>
+  <p>The info below might not be entirely complete as there are lots of details for various content types. Consider it a brief overview.</p>
 </div>
 
 
@@ -163,13 +160,15 @@ You can use any Git client for it or, since VersionPress 2.0, there is a GUI for
 
 VersionPress treats manual commits exactly the same as auto-generated commits – they will be visible in the table, [undo or rollback](./undo-and-rollback) them, etc.
 
+## Frequent DB writes
 
+Some entities are changed very often, e.g., view counters, Akismet spam count, etc. VersionPress only saves them once in an hour. Thus, you don't need to worry about being flooded with commits.
 
 ## What's not tracked
 
 There are certain things that VersionPress intentionally omits from versioning:
 
- - **wp-config.php** – this file is environment-specific which means there would be collisions between various developers, staging/live environments etc. See [Cloning a site](../sync/cloning) for details on how to deal with `wp-config.php`.
+ - **wp-config.php** – this file is environment-specific which means there would be collisions between various developers, staging/live environments etc. However, some parts of the config should be shared which is why VersionPress introduced **wp-config.common.php** in v3.0 – this file is committed in the Git repo and `require`'d from `wp-config.php`. See [Configuration](../getting-started/configuration) for details.
  - **VersionPress itself** – the folder `plugins/versionpress` is excluded because you don't want a rollback to take you to a state where VersionPress is outdated and possibly buggy.
  - **Anything in `wp-content` other than plugins, themes and uploads**. Common things in `wp-content` are backup folders, cache directories etc. which should generally not be versioned.
  - Log files, system files etc.
@@ -180,11 +179,8 @@ There are certain things that VersionPress intentionally omits from versioning:
 Ignoring is done using the standard [Gitignore files](http://git-scm.com/docs/gitignore) and VersionPress will try to install appropriate `.gitignore` files upon its activation.
 
 <div class="note">
- 
-  **Note**
- 
-  If the installation finds existing `.gitignore` file already in place, it will assume that the site is managed professionally and will not attempt to modify the ignore rules itself. The user will be notified about this.
- 
+  <p><strong>Note</strong></p>
+  <p>If the installation finds existing `.gitignore` file already in place, it will assume that the site is managed professionally and will not attempt to modify the ignore rules itself. The user will be notified about this.</p> 
 </div>
 
 As an example, let's say that you have a `wp-content/myfolder` folder that you want to track. This is a part of the default `.gitgnore` file which causes the `myfolder` being ignored:
