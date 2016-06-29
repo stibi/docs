@@ -38,3 +38,10 @@ Hmm, this is weird...
 ## Update 06
 
 Pushing directly to the master works, that's good, now to get also PR working.
+
+## Update 07
+
+Now it looks good, hopefully.
+
+I will just add few more commits to the branch, to make the git pull output in the slack notification message more
+interresting.

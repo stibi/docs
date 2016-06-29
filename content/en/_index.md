@@ -1,5 +1,7 @@
 # VersionPress Documentation #
 
+**This is development version of the docs site, I guess you are here by accident, right?**
+
 Welcome to [VersionPress](https://versionpress.net/) documentation. VersionPress itself is intuitive to use but some things like core concepts or installation details require more attention and are described here.
 
 <figure style="width: 90%;">
