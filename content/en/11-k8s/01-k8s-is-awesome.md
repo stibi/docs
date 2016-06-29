@@ -34,3 +34,7 @@ Here comes the roubles. Git pull initiated from the lambda function is failing a
 ## Update 05
 
 Hmm, this is weird...
+
+## Update 06
+
+Pushing directly to the master works, that's good, now to get also PR working.
