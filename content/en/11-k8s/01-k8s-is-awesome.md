@@ -38,3 +38,7 @@ Hmm, this is weird...
 ## Update 06
 
 Pushing directly to the master works, that's good, now to get also PR working.
+
+## Update 07
+
+Now it looks good, hopefully.
