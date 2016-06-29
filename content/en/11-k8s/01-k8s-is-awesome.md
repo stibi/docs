@@ -26,3 +26,7 @@ So far it works pretty good. It does have also Slack notifications, more spam, y
 
 Now it's time to unfuck the code a bit and finally introduce CI for the application itself, hurray, only few month
 delay, awesome!!!
+
+## Update 04
+
+Here comes the roubles. Git pull initiated from the lambda function is failing a bit, not yet sure why...
