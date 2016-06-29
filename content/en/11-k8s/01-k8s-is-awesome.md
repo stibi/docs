@@ -30,3 +30,7 @@ delay, awesome!!!
 ## Update 04
 
 Here comes the roubles. Git pull initiated from the lambda function is failing a bit, not yet sure why...
+
+## Update 05
+
+Hmm, this is weird...
