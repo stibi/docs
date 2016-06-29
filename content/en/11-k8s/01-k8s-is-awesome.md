@@ -18,3 +18,11 @@ I have made the change and deployed new version, so let's see with this commit n
 ## Update 02
 
 So far so good. Another test - direct push to the master, without a pull request, should work too, let's see...
+
+
+## Update 03
+
+So far it works pretty good. It does have also Slack notifications, more spam, yay!
+
+Now it's time to unfuck the code a bit and finally introduce CI for the application itself, hurray, only few month
+delay, awesome!!!
