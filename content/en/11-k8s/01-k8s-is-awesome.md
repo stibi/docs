@@ -13,3 +13,8 @@ Ok, first problem is here: the lambda function should care only about push event
 so when you push a commit to a branch, the lambda should ignore it.
 
 I have made the change and deployed new version, so let's see with this commit now.
+
+
+## Update 02
+
+So far so good. Another test - direct push to the master, without a pull request, should work too, let's see...
